@@ -69,9 +69,9 @@ import (
 // GEOSChem is the location of GEOS-Chem output files.
 // [DATE] should be used as a wild card for the simulation date.
 //
-// OlsonLandMap is the location of the GEOS-Chem Olson land use map file,
+// VegTypeGlobal is the location of the GEOS-Chem vegtype.global file,
 // which is described here:
-// http://wiki.seas.harvard.edu/geos-chem/index.php/Olson_land_map
+// http://wiki.seas.harvard.edu/geos-chem/index.php/Olson_land_map#Structure_of_the_vegtype.global_file
 //
 // InMAPData is the path where the preprocessed baseline meteorology and pollutant
 // data should be written.
@@ -87,7 +87,7 @@ import (
 // dash indicates whether GEOS-Chem variable names are in the form 'IJ-AVG-S__xxx'
 // as opposed to 'IJ_AVG_S_xxx'.
 func Preproc(StartDate, EndDate, CTMType, WRFOut, GEOSA1, GEOSA3Cld, GEOSA3Dyn, GEOSI3, GEOSA3MstE, GEOSApBp,
-	GEOSChem, OlsonLandMap, InMAPData string, CtmGridXo, CtmGridYo, CtmGridDx, CtmGridDy float64, dash bool, recordDeltaStr, fileDeltaStr string, noChemHour bool) error {
+	GEOSChem, VegTypeGlobal, InMAPData string, CtmGridXo, CtmGridYo, CtmGridDx, CtmGridDy float64, dash bool) error {
 	msgChan := make(chan string)
 	go func() {
 		for {
@@ -96,36 +96,7 @@ func Preproc(StartDate, EndDate, CTMType, WRFOut, GEOSA1, GEOSA3Cld, GEOSA3Dyn, 
 	}()
 	var ctm inmap.Preprocessor
 	switch CTMType {
-	case "GEOS-Chem":
-		vars := []string{StartDate, EndDate, CTMType, GEOSA1, GEOSA3Cld, GEOSA3Dyn, GEOSI3, GEOSA3MstE, GEOSChem, OlsonLandMap, recordDeltaStr, fileDeltaStr}
-		varNames := []string{"StartDate", "EndDate", "CTMType", "GEOSA1", "GEOSA3Cld", "GEOSA3Dyn", "GEOSI3", "GEOSA3MstE", "GEOSChem", "OlsonLandMap", "recordDeltaStr", "fileDeltaStr"}
-		for i, v := range vars {
-			if v == "" {
-				return fmt.Errorf("inmap preprocessor: configuration variable %s is not specified", varNames[i])
-			}
-		}
-		var err error
-		ctm, err = inmap.NewGEOSChem(
-			GEOSA1,
-			GEOSA3Cld,
-			GEOSA3Dyn,
-			GEOSI3,
-			GEOSA3MstE,
-			GEOSApBp,
-			GEOSChem,
-			OlsonLandMap,
-			StartDate,
-			EndDate,
-			dash,
-			recordDeltaStr,
-			fileDeltaStr,
-			noChemHour,
-			msgChan,
-		)
-		if err != nil {
-			return err
-		}
-	case "WRF-Chem":
+	case "WRF-Cmaq":
 		vars := []string{StartDate, EndDate, CTMType, WRFOut}
 		varNames := []string{"StartDate", "EndDate", "CTMType", "WRFOut"}
 		for i, v := range vars {
@@ -134,7 +105,7 @@ func Preproc(StartDate, EndDate, CTMType, WRFOut, GEOSA1, GEOSA3Cld, GEOSA3Dyn, 
 			}
 		}
 		var err error
-		ctm, err = inmap.NewWRFChem(WRFOut, StartDate, EndDate, msgChan)
+		ctm, err = inmap.NewWRFCmaq(WRFOut, StartDate, EndDate, msgChan)
 		if err != nil {
 			return err
 		}
@@ -151,12 +122,8 @@ func Preproc(StartDate, EndDate, CTMType, WRFOut, GEOSA1, GEOSA3Cld, GEOSA3Dyn, 
 	if err != nil {
 		return fmt.Errorf("inmap: preprocessor writing output file: %v", err)
 	}
-	if err := ctmData.Write(ff); err != nil {
-		return fmt.Errorf("inmap: preprocessor writing output file: %v", err)
-	}
-	if err := ff.Close(); err != nil {
-		return fmt.Errorf("inmap: preprocessor closing output file: %v", err)
-	}
+	ctmData.Write(ff)//, CtmGridXo, CtmGridYo, CtmGridDx, CtmGridDy)
+	ff.Close()
 
 	return nil
 }

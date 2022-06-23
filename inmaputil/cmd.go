@@ -228,7 +228,7 @@ file and saves the result for use in future InMAP simulations.`,
 				os.ExpandEnv(cfg.GetString("Preproc.StartDate")),
 				os.ExpandEnv(cfg.GetString("Preproc.EndDate")),
 				os.ExpandEnv(cfg.GetString("Preproc.CTMType")),
-				maybeDownload(ctx, os.ExpandEnv(cfg.GetString("Preproc.WRFChem.WRFOut")), outChan),
+				maybeDownload(ctx, os.ExpandEnv(cfg.GetString("Preproc.WRFCmaq.WRFOut")), outChan),
 				maybeDownload(ctx, os.ExpandEnv(cfg.GetString("Preproc.GEOSChem.GEOSA1")), outChan),
 				maybeDownload(ctx, os.ExpandEnv(cfg.GetString("Preproc.GEOSChem.GEOSA3Cld")), outChan),
 				maybeDownload(ctx, os.ExpandEnv(cfg.GetString("Preproc.GEOSChem.GEOSA3Dyn")), outChan),
@@ -236,17 +236,14 @@ file and saves the result for use in future InMAP simulations.`,
 				maybeDownload(ctx, os.ExpandEnv(cfg.GetString("Preproc.GEOSChem.GEOSA3MstE")), outChan),
 				os.ExpandEnv(cfg.GetString("Preproc.GEOSChem.GEOSApBp")),
 				maybeDownload(ctx, os.ExpandEnv(cfg.GetString("Preproc.GEOSChem.GEOSChem")), outChan),
-				maybeDownload(ctx, os.ExpandEnv(cfg.GetString("Preproc.GEOSChem.OlsonLandMap")), outChan),
+				maybeDownload(ctx, os.ExpandEnv(cfg.GetString("Preproc.GEOSChem.VegTypeGlobal")), outChan),
 				maybeDownload(ctx, os.ExpandEnv(cfg.GetString("InMAPData")), outChan),
 				cfg.GetFloat64("Preproc.CtmGridXo"),
 				cfg.GetFloat64("Preproc.CtmGridYo"),
 				cfg.GetFloat64("Preproc.CtmGridDx"),
 				cfg.GetFloat64("Preproc.CtmGridDy"),
 				cfg.GetBool("Preproc.GEOSChem.Dash"),
-				cfg.GetString("Preproc.GEOSChem.ChemRecordInterval"),
-				cfg.GetString("Preproc.GEOSChem.ChemFileInterval"),
-				cfg.GetBool("Preproc.GEOSChem.NoChemHourIndex"),
-			)
+				)
 		},
 		DisableAutoGenTag: true,
 	}
@@ -923,6 +920,15 @@ loading the data.`,
 			defaultVal: "WRF-Chem",
 			flagsets:   []*pflag.FlagSet{cfg.preprocCmd.Flags()},
 		},
+		{
+			name: "Preproc.WRFCmaq.WRFOut",
+			usage: `
+              Preproc.WRFCmaq.WRFOut is the location of WRF-Chem output files.
+              [DATE] should be used as a wild card for the simulation date.`,
+			defaultVal: "${GOPATH}/src/github.com/spatialmodel/inmap/inmap/testdata/preproc/wrfout_d01_[DATE]",
+			flagsets:   []*pflag.FlagSet{cfg.preprocCmd.Flags()},
+		},
+
 		{
 			name: "Preproc.WRFChem.WRFOut",
 			usage: `Preproc.WRFChem.WRFOut is the location of WRF-Chem output files. [DATE] should be used as a wild card for the simulation date.
