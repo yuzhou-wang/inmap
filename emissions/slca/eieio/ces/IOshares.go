@@ -31,7 +31,7 @@ import (
 	"strings"
 
 	"github.com/gonum/floats"
-	"github.com/spatialmodel/inmap/emissions/slca/eieio/eieiorpc"
+	"github.com/yuzhou-wang/inmap/emissions/slca/eieio/eieiorpc"
 
 	"github.com/tealeg/xlsx"
 )

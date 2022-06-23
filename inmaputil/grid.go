@@ -23,8 +23,8 @@ import (
 	"log"
 	"os"
 
-	"github.com/spatialmodel/inmap"
-	"github.com/spatialmodel/inmap/science/chem/simplechem"
+	"github.com/yuzhou-wang/inmap"
+	"github.com/yuzhou-wang/inmap/science/chem/simplechem"
 )
 
 // Grid creates and saves a new variable resolution grid.

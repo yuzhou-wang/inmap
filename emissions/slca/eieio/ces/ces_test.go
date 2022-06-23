@@ -24,10 +24,10 @@ import (
 
 	"github.com/BurntSushi/toml"
 	"github.com/gonum/floats"
-	"github.com/spatialmodel/inmap/emissions/slca/eieio"
-	"github.com/spatialmodel/inmap/emissions/slca/eieio/ces"
-	"github.com/spatialmodel/inmap/emissions/slca/eieio/eieiorpc"
-	"github.com/spatialmodel/inmap/epi"
+	"github.com/yuzhou-wang/inmap/emissions/slca/eieio"
+	"github.com/yuzhou-wang/inmap/emissions/slca/eieio/ces"
+	"github.com/yuzhou-wang/inmap/emissions/slca/eieio/eieiorpc"
+	"github.com/yuzhou-wang/inmap/epi"
 )
 
 // Set up directory location

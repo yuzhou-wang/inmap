@@ -21,9 +21,9 @@ package simpledrydep_test
 import (
 	"testing"
 
-	"github.com/spatialmodel/inmap"
-	"github.com/spatialmodel/inmap/science/chem/simplechem"
-	"github.com/spatialmodel/inmap/science/drydep/simpledrydep"
+	"github.com/yuzhou-wang/inmap"
+	"github.com/yuzhou-wang/inmap/science/chem/simplechem"
+	"github.com/yuzhou-wang/inmap/science/drydep/simpledrydep"
 )
 
 // Indicies of individual pollutants in arrays.

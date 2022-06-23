@@ -9,8 +9,8 @@ import (
 
 	"github.com/BurntSushi/toml"
 
-	"github.com/spatialmodel/inmap/emissions/slca/eieio/eieiorpc"
-	"github.com/spatialmodel/inmap/epi"
+	"github.com/yuzhou-wang/inmap/emissions/slca/eieio/eieiorpc"
+	"github.com/yuzhou-wang/inmap/epi"
 )
 
 // Set up directory location for configuration files.

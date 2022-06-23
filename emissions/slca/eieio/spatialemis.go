@@ -21,9 +21,9 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/spatialmodel/inmap/emissions/slca"
-	"github.com/spatialmodel/inmap/emissions/slca/eieio/eieiorpc"
-	"github.com/spatialmodel/inmap/internal/hash"
+	"github.com/yuzhou-wang/inmap/emissions/slca"
+	"github.com/yuzhou-wang/inmap/emissions/slca/eieio/eieiorpc"
+	"github.com/yuzhou-wang/inmap/internal/hash"
 
 	"gonum.org/v1/gonum/mat"
 )

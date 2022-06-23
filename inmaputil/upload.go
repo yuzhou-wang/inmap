@@ -29,8 +29,8 @@ import (
 	"strings"
 
 	"gocloud.dev/blob"
-	"github.com/spatialmodel/inmap"
-	"github.com/spatialmodel/inmap/cloud"
+	"github.com/yuzhou-wang/inmap"
+	"github.com/yuzhou-wang/inmap/cloud"
 )
 
 type uploader struct {

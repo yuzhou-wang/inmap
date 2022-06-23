@@ -28,8 +28,8 @@ import (
 	"github.com/ctessum/geom/proj"
 	"github.com/gonum/floats"
 	_ "github.com/lib/pq"
-	"github.com/spatialmodel/inmap/internal/hash"
-	"github.com/spatialmodel/inmap/internal/postgis"
+	"github.com/yuzhou-wang/inmap/internal/hash"
+	"github.com/yuzhou-wang/inmap/internal/postgis"
 )
 
 func TestCreateSurrogates_osm(t *testing.T) {

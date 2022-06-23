@@ -33,7 +33,7 @@ import (
 	"github.com/ctessum/geom/encoding/shp"
 	"github.com/ctessum/geom/proj"
 	"github.com/ctessum/unit"
-	"github.com/spatialmodel/inmap/emissions/aep"
+	"github.com/yuzhou-wang/inmap/emissions/aep"
 )
 
 const (

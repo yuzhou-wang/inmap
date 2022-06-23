@@ -40,10 +40,10 @@ import (
 	"github.com/ctessum/geom"
 	"github.com/ctessum/geom/encoding/shp"
 	"github.com/lnashier/viper"
-	"github.com/spatialmodel/inmap"
-	"github.com/spatialmodel/inmap/cloud"
-	"github.com/spatialmodel/inmap/cloud/cloudrpc"
-	"github.com/spatialmodel/inmap/science/chem/simplechem"
+	"github.com/yuzhou-wang/inmap"
+	"github.com/yuzhou-wang/inmap/cloud"
+	"github.com/yuzhou-wang/inmap/cloud/cloudrpc"
+	"github.com/yuzhou-wang/inmap/science/chem/simplechem"
 	"github.com/spf13/cobra"
 )
 

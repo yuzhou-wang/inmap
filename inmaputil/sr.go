@@ -25,9 +25,9 @@ import (
 	"os"
 
 	"github.com/ctessum/geom"
-	"github.com/spatialmodel/inmap"
-	"github.com/spatialmodel/inmap/cloud/cloudrpc"
-	"github.com/spatialmodel/inmap/sr"
+	"github.com/yuzhou-wang/inmap"
+	"github.com/yuzhou-wang/inmap/cloud/cloudrpc"
+	"github.com/yuzhou-wang/inmap/sr"
 )
 
 // StartSR starts the SR matrix creator, getting configuration information from the

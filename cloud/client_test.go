@@ -27,10 +27,10 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/spatialmodel/inmap/cloud"
-	"github.com/spatialmodel/inmap/cloud/cloudrpc"
-	"github.com/spatialmodel/inmap/inmaputil"
-	"github.com/spatialmodel/inmap/internal/postgis"
+	"github.com/yuzhou-wang/inmap/cloud"
+	"github.com/yuzhou-wang/inmap/cloud/cloudrpc"
+	"github.com/yuzhou-wang/inmap/inmaputil"
+	"github.com/yuzhou-wang/inmap/internal/postgis"
 )
 
 // Set up directory location for configuration files.

@@ -22,7 +22,7 @@ import (
 	"fmt"
 
 	"github.com/ctessum/sparse"
-	"github.com/spatialmodel/inmap/internal/hash"
+	"github.com/yuzhou-wang/inmap/internal/hash"
 )
 
 type requestPayload struct {

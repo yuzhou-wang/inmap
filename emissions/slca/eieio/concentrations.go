@@ -23,8 +23,8 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/spatialmodel/inmap/emissions/slca/eieio/eieiorpc"
-	"github.com/spatialmodel/inmap/internal/hash"
+	"github.com/yuzhou-wang/inmap/emissions/slca/eieio/eieiorpc"
+	"github.com/yuzhou-wang/inmap/internal/hash"
 
 	"github.com/ctessum/requestcache"
 	"gonum.org/v1/gonum/mat"

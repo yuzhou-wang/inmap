@@ -22,8 +22,8 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/spatialmodel/inmap/cloud"
-	"github.com/spatialmodel/inmap/inmaputil"
+	"github.com/yuzhou-wang/inmap/cloud"
+	"github.com/yuzhou-wang/inmap/inmaputil"
 )
 
 func TestRunInputFromViper(t *testing.T) {

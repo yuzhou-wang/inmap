@@ -26,7 +26,7 @@ import (
 	"testing"
 
 	"github.com/BurntSushi/toml"
-	"github.com/spatialmodel/inmap/emissions/aep"
+	"github.com/yuzhou-wang/inmap/emissions/aep"
 )
 
 func TestSpeciate(t *testing.T) {

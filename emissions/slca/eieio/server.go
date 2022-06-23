@@ -40,8 +40,8 @@ import (
 	"github.com/gorilla/websocket"
 	"github.com/improbable-eng/grpc-web/go/grpcweb"
 	"github.com/sirupsen/logrus"
-	"github.com/spatialmodel/inmap/emissions/slca/eieio/ces"
-	"github.com/spatialmodel/inmap/internal/hash"
+	"github.com/yuzhou-wang/inmap/emissions/slca/eieio/ces"
+	"github.com/yuzhou-wang/inmap/internal/hash"
 	"gonum.org/v1/gonum/mat"
 	"gonum.org/v1/plot"
 	"gonum.org/v1/plot/palette"
@@ -51,9 +51,9 @@ import (
 	"gonum.org/v1/plot/vg/vgimg"
 	"google.golang.org/grpc"
 
-	"github.com/spatialmodel/inmap/emissions/slca"
-	"github.com/spatialmodel/inmap/emissions/slca/eieio/eieiorpc"
-	"github.com/spatialmodel/inmap/epi"
+	"github.com/yuzhou-wang/inmap/emissions/slca"
+	"github.com/yuzhou-wang/inmap/emissions/slca/eieio/eieiorpc"
+	"github.com/yuzhou-wang/inmap/epi"
 )
 
 type config struct {

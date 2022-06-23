@@ -30,7 +30,7 @@ import (
 	"github.com/ctessum/geom"
 	"github.com/ctessum/geom/encoding/shp"
 	"github.com/ctessum/geom/proj"
-	"github.com/spatialmodel/inmap"
+	"github.com/yuzhou-wang/inmap"
 )
 
 func TestLayerFracs(t *testing.T) {

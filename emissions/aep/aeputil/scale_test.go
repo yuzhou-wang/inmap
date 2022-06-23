@@ -25,7 +25,7 @@ import (
 
 	"github.com/BurntSushi/toml"
 	"github.com/ctessum/unit"
-	"github.com/spatialmodel/inmap/emissions/aep"
+	"github.com/yuzhou-wang/inmap/emissions/aep"
 )
 
 func TestScale(t *testing.T) {

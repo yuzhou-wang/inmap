@@ -1,4 +1,4 @@
-module github.com/spatialmodel/inmap
+module github.com/yuzhou-wang/inmap
 
 require (
 	cloud.google.com/go/storage v1.15.0

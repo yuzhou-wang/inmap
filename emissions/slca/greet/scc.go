@@ -6,7 +6,7 @@ import (
 	"io"
 	"strings"
 
-	"github.com/spatialmodel/inmap/emissions/slca"
+	"github.com/yuzhou-wang/inmap/emissions/slca"
 )
 
 // AddSCCs adds SCC codes to the greet database by matching information in

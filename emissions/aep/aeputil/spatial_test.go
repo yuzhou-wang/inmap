@@ -28,8 +28,8 @@ import (
 	"github.com/ctessum/geom"
 	"github.com/ctessum/geom/proj"
 	"github.com/ctessum/unit"
-	"github.com/spatialmodel/inmap/emissions/aep"
-	"github.com/spatialmodel/inmap/internal/postgis"
+	"github.com/yuzhou-wang/inmap/emissions/aep"
+	"github.com/yuzhou-wang/inmap/internal/postgis"
 )
 
 func TestSpatial(t *testing.T) {

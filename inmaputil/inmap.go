@@ -29,10 +29,10 @@ import (
 	"time"
 
 	"github.com/ctessum/geom"
-	"github.com/spatialmodel/inmap"
-	"github.com/spatialmodel/inmap/emissions/aep"
-	"github.com/spatialmodel/inmap/emissions/aep/aeputil"
-	"github.com/spatialmodel/inmap/science/chem/simplechem"
+	"github.com/yuzhou-wang/inmap"
+	"github.com/yuzhou-wang/inmap/emissions/aep"
+	"github.com/yuzhou-wang/inmap/emissions/aep/aeputil"
+	"github.com/yuzhou-wang/inmap/science/chem/simplechem"
 	"github.com/spf13/cobra"
 )
 

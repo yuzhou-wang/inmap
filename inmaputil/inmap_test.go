@@ -27,8 +27,8 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/spatialmodel/inmap"
-	"github.com/spatialmodel/inmap/internal/postgis"
+	"github.com/yuzhou-wang/inmap"
+	"github.com/yuzhou-wang/inmap/internal/postgis"
 )
 
 // Set up directory location for configuration files.

@@ -9,7 +9,7 @@ import (
 	"runtime"
 	"testing"
 
-	"github.com/spatialmodel/inmap/emissions/slca"
+	"github.com/yuzhou-wang/inmap/emissions/slca"
 
 	"github.com/ctessum/unit"
 )

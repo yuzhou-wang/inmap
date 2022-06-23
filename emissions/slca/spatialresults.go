@@ -21,7 +21,7 @@ import (
 	"fmt"
 	"sort"
 
-	"github.com/spatialmodel/inmap"
+	"github.com/yuzhou-wang/inmap"
 
 	"golang.org/x/net/context"
 
