@@ -36,7 +36,7 @@ asoa4j,bsoa1i,bsoa1j,bsoa2i,bsoa2j,bsoa3i,bsoa3j,bsoa4i,bsoa4j,no,no2,no3ai,no3a
 so2,sulf,so4ai,so4aj,nh3,nh4ai,nh4aj,PM2_5_DRY,U,V,W,PBLH,PH,PHB,HFX,UST,PBLH,T,
 PB,P,ho,h2o2,LU_INDEX,QRAIN,CLDFRA,QCLOUD,ALT,SWDOWN,GLW */
 
-const cmaqFormat = "20060102"
+const cmaqFormat = "2006-01-02"
 // = "aVOC            bVOC            aSOA            bSOA            bOrgPartitioningaOrgPartitioningTotalPM25       gNH             gNO             gS              pNH             pNO             pS              NHPartitioning  NOPartitioning  SPartitioning   NO_NO2partitioni" ;
 // aVOC bVOC aSOA bSOA pNO pS pNH totalPM25=TotalPM25 sox=gS nox=gNO nh3=gNH
 // WRFCmaq is an InMAP preprocessor for WRF-Cmaq output.
